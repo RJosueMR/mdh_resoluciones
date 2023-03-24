@@ -3,20 +3,34 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Iniciar Sesión</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='estilo.css'>
     <script src='main.js'></script>
 </head>
 <body>
-    <div>
-        <form action="" method="post">
-            <label for="usuario">Usuario:</label>
-            <input type="text" name="usuario" id="usuario">
-            <label for="password">Password:</label>
-            <input type="text" name="passwors" id="password">
-            <input type="submit" value="Iniciar Sesion">
-        </form>
+    <div class="Container">
+        <fieldset>
+            <img src="Hualmay.png" id="Portada">
+        </fieldset>
+        <fieldset class="form">
+            <form action="" method="post" class="Login">
+                <label for="usuario">Usuario:</label>
+                <br>
+                <br>
+                <input type="text" name="Usuario" placeholder="Nombre de Usuario" id="usuario">
+                <br>
+                <br>
+                <label for="password">Password:</label>
+                <br>
+                <br>
+                <input type="text" name="Password" placeholder="Contraseña" id="password">
+                <p class="message">¿No tienes Cuenta?<a href="#"><br>Crea una cuenta</a></p>
+                <br>
+                <br>
+                <input type="submit" value="Iniciar Sesion">
+            </form>
+        </fieldset>
     </div>
 </body>
 </html>
