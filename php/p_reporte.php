@@ -2,7 +2,6 @@
 
 include("conexion.php");
 include("p_login.php");
-include("autorizar.php");
 
 $codigo = $_SESSION["usuario"];
 
@@ -18,10 +17,7 @@ while ($r = mysql_fetch_array($fila)) {
     echo $r["FechaPublicRes"];
 
     # Si es admin, puede ver
-    $validacion = AutorizarAdministrador();
-    if ($validacion) {
-        echo "Cambiar estado";
-    }
+    
    
     echo $r["NombreTipoRes"];
 }

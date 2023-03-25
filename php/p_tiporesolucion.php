@@ -4,7 +4,8 @@ include("conexion.php");
 $_nombre = $_POST['txt_tiporesol'];
 $sql="select * from tiporesolucion";
 
-while($r=mysql_query($sql,$cn)){
+while($r=mysql_query($sql,$cn))
+{
 
     if($r['NombreTipoRes']==$_nombre){
 
