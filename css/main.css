@@ -10,29 +10,32 @@ body{
     transform: translate(-50%,-50%);
     display: flex;
 }
-img {
-	max-width: 100%;
-	margin-bottom: 20px;
-}
-
 .Img{
     width: 50%;
     box-sizing: border-box;
-    /*padding: 10px;*/
     border: 1px solid #ccc;
     position: relative;
 	z-index: 1;
 	background: #FFFFFF;
 	max-width: 360px;
-	margin: 0 auto 100px;
+	margin: 0 auto 100px auto;
 	padding: 45px;
-	text-align: center;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
+img {
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+
+.Portada{
+    width: 700;
+    height: 500;
+}
+
 fieldset{
     width: 50%;
     box-sizing: border-box;
-    /*padding: 10px;*/
     border: 1px solid #ccc;
     position: relative;
 	z-index: 1;
@@ -75,20 +78,6 @@ input[type="submit"]:hover {
 }
 
 .form .message a{
-    color: #4CAF50;
+    color: #0b2cbe;
     text-decoration: none;
-}
-
-
-/*@media (min-width: 768px) {
-    .container{
-        display: flex;
-    }
-    fieldset{
-        width: 50%;
-    }
-}*/
-.Portada{
-    width: 700;
-    height: 500;
 }
