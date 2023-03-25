@@ -23,7 +23,7 @@ if($_direusu == null || $_celusu == null || $_emailusu == null || $_sexousu == n
     mysql_close($cn);
     header('location: xxx');
 }else{
-    
+
 }
 
 
