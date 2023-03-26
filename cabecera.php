@@ -13,7 +13,7 @@
     </nav>
 
     <div>
-        <a href="#">Bienvenido</a>
+        <a href="php/p_cerrarsesion.php">Bienvenido</a>
         <img class="perfil" src="" alt="">
     </div>
 

@@ -2,9 +2,10 @@
 
 session_start();
 
-if ($_SESSION["usuario"] != null) {
+if (isset($_SESSION["usuario"])) {
     
     #Se ejecuta si hay sesión
+    header('location: principal.php');
 
 }
 
