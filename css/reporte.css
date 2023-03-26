@@ -1,0 +1,13 @@
+.contenedor-tabla {
+    background-color: white;
+    box-shadow: 5px 5px 20px black;
+    margin: auto;
+    margin-top: 50px;
+    min-width: 300px;
+    width: 95%;
+}
+
+.tabla-reporte{
+    border-collapse: collapse;
+    margin: auto;
+}

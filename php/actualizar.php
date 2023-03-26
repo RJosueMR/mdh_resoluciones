@@ -15,4 +15,4 @@ if($r['DireccionUsu'] == null || $r['CelularUsu'] == null || $r['EmailUsu'] == n
     header('location: ../principal.html');
 }
 
-?>	
+?>

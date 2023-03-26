@@ -16,8 +16,6 @@ while ($r = mysql_fetch_array($fila)) {
     echo $r["ContenidoRes"];
     echo $r["FechaPublicRes"];
 
-    # Si es admin, puede ver
-    
    
     echo $r["NombreTipoRes"];
 }

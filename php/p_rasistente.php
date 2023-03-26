@@ -26,5 +26,14 @@ if($_direusu == null || $_celusu == null || $_emailusu == null || $_sexousu == n
 
 }
 
-
+//Funcion para crear contraseña
+function CreatePassword(){
+    $_plantilla="1234567890qwertyuiopasdfghjklzxcvbnm";
+        $_pass="";
+        for ($i=1; $i <=8 ; $i++) { 
+            
+            $_pass=$_pass.substr($_plantilla,rand(1,strlen($_plantilla)),1);
+        }
+        return $_pass;
+}
 ?>

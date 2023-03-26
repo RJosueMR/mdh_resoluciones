@@ -2,10 +2,9 @@
 
 session_start();
 
-if ( $_SESSION["tipousuario"] != "1") {
+if ($_SESSION["usuario"] != null) {
     
-    header('location: ../index.html');
-    exit();
+    #Se ejecuta si hay sesión
 
 }
 

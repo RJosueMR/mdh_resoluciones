@@ -1,8 +1,12 @@
-* {
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #24252A;
+    
+}
+
+img {
+    width: 25px;
 }
 
 li, a, button {
@@ -15,6 +19,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
+    background-color: firebrick;
 }
 
 .logo {
@@ -34,6 +39,6 @@ header {
     transition: all 0.3s case 0s;
 }
 
-.enlaces li a {
-    color: aqua;
+.enlaces li a:hover {
+    color: goldenrod;
 }
