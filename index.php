@@ -1,5 +1,6 @@
 <?php
-include('php/p_verificarsesion.php');
+include('php/funciones.php');
+VerificarIndex();
 ?>
 <!DOCTYPE html>
 <html>

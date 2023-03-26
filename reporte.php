@@ -1,7 +1,8 @@
 <?php
 
 include("php/conexion.php");
-include('php/p_verificarsesion.php');
+include('php/funciones.php');
+VerificarSesion();
 
 ?>
 
@@ -21,7 +22,6 @@ include('php/p_verificarsesion.php');
     
     <?php
     include('cabecera.php');
-    $codigo = $_SESSION["usuario"];
     $sql = "select r.*, tr.*, e.* from resolucion r, tiporesolucion tr, estado e";
     $fila = mysql_query($sql, $cn);
     ?>
@@ -33,21 +33,39 @@ include('php/p_verificarsesion.php');
                 <th>Tipo de Resolución</th>
                 <th>Contenido</th>
                 <th>Fecha de Publicación</th>
+                <?php
+                if ($_SESSION["tipousuario"] == "ADMINISTRADOR") {
+                ?>
                 <th>Estado</th>
+                <?php
+                }
+                ?>                
                 <th colspan="3">Opciones</th> <!-- Debe contener 3 --->
             </tr>
             <?php
             while ($r = mysql_fetch_array($fila)) {                
             ?>
             <tr class="fila">
-                <td><?php echo $r["NombreTipoRes"]; ?></td>
+                <td><?php echo utf8_encode($r["NombreTipoRes"]); ?></td>
                 <td><?php echo $r["NumeroRes"]; ?></td>
-                <td><?php echo $r["ContenidoRes"]; ?></td>
+                <td><?php echo utf8_encode($r["ContenidoRes"]); ?></td>
                 <td><?php echo $r["FechaPublicRes"]; ?></td>
+                <?php
+                if($_SESSION["tipousuario"] == "ADMINISTRADOR"){
+                ?>
                 <td><?php echo $r["NombreEstado"]; ?></td>
-                <td>Descargar</td>
+                <?php
+                }
+                ?>
+                <td>Descargar</td>                
                 <td>Editar</td>
+                <?php
+                if ($_SESSION["tipousuario"] == "ADMINISTRADOR") {
+                ?>
                 <td>Eliminar</td>
+                <?php
+                }
+                ?>
             </tr>
             <?php
             }

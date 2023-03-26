@@ -5,11 +5,26 @@
     margin-top: 50px;
     min-width: 300px;
     padding: 25px;
-    width: 95%;
+    width: 85%;
 }
 
 .tabla-reporte{
     border-collapse: collapse;
     margin: auto;
     width: 85%;
+}
+
+th, td {
+    border-style: solid;
+    border-color: black;
+    padding: 15px;
+}
+
+th {
+    background-color: brown;
+    color: white;
+}
+
+td {
+    text-align: center;
 }

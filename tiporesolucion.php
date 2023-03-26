@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/cabecera.css'>
-    <title>Document</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/registros.css'>
+    <title>Tipo de Resolución</title>
 </head>
 <body>
     <?php 
     include("cabecera.php");
     ?>
-    <fieldset>
+    <div class="contenedor contenedor-tipor">
         <form action="../p_tiporesolucion.php" method="post">
             <table>
                 <tr>
-                    <td>Nombre Tipo de Resolucion</td>
+                    <td>Nombre Tipo de Resolución</td>
                 </tr>
                 <tr>
                     <td><input type="text" name="txt_tipoResolucion" id=""></td>
@@ -26,6 +27,6 @@
                 </tr>
             </table>
         </form>
-    </fieldset>
+    </div>
 </body>
 </html>
