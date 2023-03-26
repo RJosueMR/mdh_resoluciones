@@ -22,7 +22,6 @@ if ($codigo == null) {
 
     $_SESSION["usuario"] = $codigo;
     $_SESSION["tipousuario"] = $r["NombreTipoUsu"];
-    $_SESSION["autorizacion"] = 1;
 
     header('location: ../principal.html');
 }
