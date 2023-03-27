@@ -14,9 +14,16 @@ VerificarIndex();
 </head>
 <body>
     <div class="Login-Page">
-        <fieldset class="Img">
-            <img src="img/Muni-Hualmay.png" class="Portada">
-        </fieldset>
+    <div class="Slider">
+            <div class="Slides">
+                <div class="Slide">
+                    <img src="img/Muni-Hualmay.png">
+                </div>
+                <div class="Slide">
+                    <img src="img/Muni-Hualmay2.png">
+                </div>
+            </div>
+        </div>
         <fieldset class="form">
             <form action="php/p_login.php" method="post" class="Login-Form">
                 <label for="usuario">Usuario:</label>
