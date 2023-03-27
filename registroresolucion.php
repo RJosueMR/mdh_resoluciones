@@ -1,3 +1,6 @@
+<?php
+include("php/conexion.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,17 +19,30 @@
         <form action="php/registroresolucion.php" method="post">
             <div>
                 <div>Numero de Resolución</div>
-                <div><input type="text" name="" class="caja caja-pequeña"> - <?php echo date("Y"); ?> - MDH</div>
+                <div><input type="text" name="txt_NumRes" class="caja caja-pequeña"> - <?php echo date("Y"); ?> - MDH</div>
             </div>
             <div>
                 <div>Contenido:</div>
-                <div><textarea name="" id="" cols="30" rows="10"></textarea></div>
+                <div><textarea name="txt_ContRes" id="" cols="30" rows="10"></textarea></div>
             </div>
             <div>
                 <div>Fecha Publicación:</div>
-                <div><input type="date" name="" id=""></div>
+                <div><input type="date" name="txt_FechPub" id=""></div>
             </div>
-
+            <div>
+                <div>Tipo Resolucion:</div>
+                <div><select name="lst_TipoRes" id="">
+                    <?php
+                    $sql = "select*from tiporesolucion";
+                    $fila = mysql_query($sql,$cn);
+                    while($r=mysql_fetch_array($fila)){
+                    ?>
+                    <option value="<?php echo $r['IdTipoUsu'];?>"><?php echo $r['NombreTipoUsu'];?></option>
+                    <?php
+                    }
+                    ?>
+                </select></div>
+            </div>
         </form>
     </div>
 </body>
