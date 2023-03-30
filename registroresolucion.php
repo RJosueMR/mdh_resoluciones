@@ -17,19 +17,19 @@ include("php/conexion.php");
     ?>
     <div class="contenedor contenedor-res">
         <form action="php/p_registroresolucion.php" method="post" enctype="multipart/form-data">
-            <div class="wrapper">
+            <div>
                 <div class="Premisa1">Numero de Resolución:</div>
                 <div><input type="text" name="txt_NumRes" class="caja caja-pequeña" required> - <?php echo date("Y"); ?> - MDH</div>
             </div>
-            <div class="wrapper">
+            <div>
                 <div class="Premisa2">Contenido:</div>
                 <div><textarea name="txt_ContRes" id="" cols="30" rows="10" required></textarea></div>
             </div>
-            <div class="wrapper">
+            <div>
                 <div class="Premisa3">Fecha Publicación:</div>
                 <div><input type="date" name="txt_FechPub" required></div>
             </div>
-            <div class="wrapper">
+            <div>
                 <div class="Premisa4">Tipo Resolucion:</div>
                 <div><select name="lst_TipoRes" id="" required>
                     <?php
@@ -43,7 +43,7 @@ include("php/conexion.php");
                     ?>
                 </select></div>
             </div>
-            <div class="wrapper">
+            <div>
                 <div class="Premisa5">Subir resolución:</div>
                 <div><input type="file" name="archivo" required></div>
             </div>
