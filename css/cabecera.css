@@ -8,7 +8,7 @@ img {
     width: 25px;
 }
 
-li, a, button {
+li, .enlace-cabecera, button {
     color: white;
     text-decoration: none;
 }
@@ -36,11 +36,11 @@ header {
     padding: 20px 20px;
 }
 
-.enlaces li a {
+.enlaces li .enlace-cabecera {
     transition: all 0.3s case 0s;
 }
 
-.enlaces li a:hover {
+.enlaces li .enlace-cabecera:hover {
     color: goldenrod;
 }
 
@@ -57,7 +57,7 @@ header {
     display: block;
 }
 
-.enlaces-sub li a {
+.enlaces-sub li .enlace-cabecera {
     display: block;
     color: white;
 }

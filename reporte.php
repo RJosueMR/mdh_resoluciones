@@ -60,13 +60,13 @@ VerificarSesion();
                 ?>
                 <td><a href="#"><img src="img/pdf-icon.png" alt="descargar_resolución"></a></td>                
                 <td>
-                    <div>Editar</div>
+                    <div class="boton"><a href="">Editar</a></div>
                 </td>
                 <?php
                 if ($_SESSION["tipousuario"] == "ADMINISTRADOR") {
                 ?>
                 <td>
-                    <div class="boton">Eliminar</div>
+                    <div class="boton"><a href="">Eliminar</a></div>
                 </td>
                 <?php
                 }

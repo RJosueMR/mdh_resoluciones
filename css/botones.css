@@ -1,7 +1,12 @@
 .boton {
-    display: inline-block;
+    display: flex;
     border-style: solid;
     border-color: black;
     border-radius: 5px;
+    border-width: 1px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    color: black;
     width: 80px;
 }

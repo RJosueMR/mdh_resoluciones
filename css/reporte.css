@@ -4,12 +4,14 @@
     margin: auto;
     margin-top: 50px;
     min-width: 908px;
+    padding: 15px;
     width: 85%;
 }
 
 .tabla-reporte{
     border-collapse: collapse;
     margin: auto;
+    margin-top: 50px;
     min-width: 883px;
     width: 85%;
 }
