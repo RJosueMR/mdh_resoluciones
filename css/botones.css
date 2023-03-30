@@ -1,0 +1,7 @@
+.boton {
+    display: inline-block;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    width: 80px;
+}

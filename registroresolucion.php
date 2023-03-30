@@ -16,33 +16,39 @@ include("php/conexion.php");
     include("cabecera.php");
     ?>
     <div class="contenedor contenedor-res">
-        <form action="php/registroresolucion.php" method="post">
-            <div>
-                <div>Numero de Resolución</div>
-                <div><input type="text" name="txt_NumRes" class="caja caja-pequeña"> - <?php echo date("Y"); ?> - MDH</div>
+        <form action="php/p_registroresolucion.php" method="post" enctype="multipart/form-data">
+            <div class="wrapper">
+                <div class="Premisa1">Numero de Resolución:</div>
+                <div><input type="text" name="txt_NumRes" class="caja caja-pequeña" required> - <?php echo date("Y"); ?> - MDH</div>
             </div>
-            <div>
-                <div>Contenido:</div>
-                <div><textarea name="txt_ContRes" id="" cols="30" rows="10"></textarea></div>
+            <div class="wrapper">
+                <div class="Premisa2">Contenido:</div>
+                <div><textarea name="txt_ContRes" id="" cols="30" rows="10" required></textarea></div>
             </div>
-            <div>
-                <div>Fecha Publicación:</div>
-                <div><input type="date" name="txt_FechPub" id=""></div>
+            <div class="wrapper">
+                <div class="Premisa3">Fecha Publicación:</div>
+                <div><input type="date" name="txt_FechPub" required></div>
             </div>
-            <div>
-                <div>Tipo Resolucion:</div>
-                <div><select name="lst_TipoRes" id="">
+            <div class="wrapper">
+                <div class="Premisa4">Tipo Resolucion:</div>
+                <div><select name="lst_TipoRes" id="" required>
                     <?php
-                    $sql = "select*from tiporesolucion";
+                    $sql = "select * from tiporesolucion";
                     $fila = mysql_query($sql,$cn);
                     while($r=mysql_fetch_array($fila)){
                     ?>
-                    <option value="<?php echo $r['IdTipoUsu'];?>"><?php echo $r['NombreTipoUsu'];?></option>
+                    <option value="<?php echo $r['IdTipoRes'];?>"><?php echo utf8_encode($r['NombreTipoRes']);?></option>
                     <?php
                     }
                     ?>
                 </select></div>
             </div>
+            <div class="wrapper">
+                <div class="Premisa5">Subir resolución:</div>
+                <div><input type="file" name="archivo" required></div>
+            </div>
+            <br>
+            <div><input type="submit" value="Agregar"></div>
         </form>
     </div>
 </body>

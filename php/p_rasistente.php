@@ -4,13 +4,13 @@ include("conexion.php");
 //Primario
 $_codusu = $_POST['txt_codusu'];
 $_passw = $_POST['txt_pasword'];
-$_apater = $_POST['txt_paterno'];
-$_amater = $_POST['txt_amaterno'];
-$_nombre = $_POST['txt_nombre'];
+$_apater = utf8_decode($_POST['txt_paterno']);
+$_amater = utf8_decode($_POST['txt_amaterno']);
+$_nombre = utf8_decode($_POST['txt_nombre']);
 $_dni = $_POST['txt_dni'];
 
 //Segundario
-$_direusu = $_POST['txt_direccion'];
+$_direusu = utf8_decode($_POST['txt_direccion']);
 $_celusu = $_POST['txt_cel'];
 $_emailusu = $_POST['txt_email'];
 $_sexousu = $_POST['txt_sexo'];

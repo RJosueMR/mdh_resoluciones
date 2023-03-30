@@ -16,13 +16,14 @@ VerificarSesion();
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/cabecera.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/reporte.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/botones.css'>
     <script src='main.js'></script>
 </head>
 <body>
     
     <?php
     include('cabecera.php');
-    $sql = "select r.*, tr.*, e.* from resolucion r, tiporesolucion tr, estado e";
+    $sql = "select r.*, tr.*, e.* from resolucion r, tiporesolucion tr, estado e group by r.NumeroRes order by r.NumeroRes desc";
     $fila = mysql_query($sql, $cn);
     ?>
 
@@ -57,12 +58,16 @@ VerificarSesion();
                 <?php
                 }
                 ?>
-                <td>Descargar</td>                
-                <td>Editar</td>
+                <td><a href="#"><img src="img/pdf-icon.png" alt="descargar_resolución"></a></td>                
+                <td>
+                    <div>Editar</div>
+                </td>
                 <?php
                 if ($_SESSION["tipousuario"] == "ADMINISTRADOR") {
                 ?>
-                <td>Eliminar</td>
+                <td>
+                    <div class="boton">Eliminar</div>
+                </td>
                 <?php
                 }
                 ?>

@@ -1,7 +1,7 @@
 <?php
 include("conexion.php");
 
-$_nombre = $_POST['txt_tipoResolucion'];
+$_nombre = utf8_decode($_POST['txt_tipoResolucion']);
 $sql="select * from tiporesolucion";
 
 //Evaluamos si ya existe el nombre tipo de resolucion
