@@ -5,7 +5,7 @@
     <nav>
 
         <ul class="enlaces">
-            <li><a href="principal.php">Inicio</a></li>
+            <li><a class="enlace-cabecera" href="principal.php">Inicio</a></li>
             <li>
                 <a class="enlace-cabecera" href="#">Operaciones</a>
                 <ul class="enlaces-sub">
@@ -18,9 +18,15 @@
 
     </nav>
 
-    <div>
-        <a class="enlace-cabecera" href="php/p_cerrarsesion.php">Bienvenido</a>
-        <img class="perfil" src="" alt="">
+    <div class="contenedor-perfil">
+        <div class="perfil">
+            <label class="enlace-cabecera">Bienvenido</label>
+            <ul class="enlaces-sub"> 
+                <li><a class="enlace-cabecera" href="datosusuario.php">Revisar Datos</a></li>
+                <li><a class="enlace-cabecera" href="php/p_cerrarsesion.php">Cerrar Sesión</a></li>
+            </ul>
+        </div>        
+        <img class="perfil-img" src="img/logo_mdh.jpg" alt="">        
     </div>
 
 </header>

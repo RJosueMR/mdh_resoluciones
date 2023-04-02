@@ -4,10 +4,6 @@ body {
     padding: 0;    
 }
 
-img {
-    width: 25px;
-}
-
 li, .enlace-cabecera, button {
     color: white;
     text-decoration: none;
@@ -21,7 +17,9 @@ header {
     background-color: firebrick;
 }
 
-.logo {
+.logo, .perfil-img {
+    height: 50px;
+    width: 50px;
     cursor: pointer;
 }
 
@@ -31,21 +29,35 @@ header {
     list-style: none;
 }
 
-.enlaces li {
+.contenedor-perfil {
+    display: flex;
+    align-items: center;
+}
+
+.enlaces li, .perfil, .perfil li {
     display: block;
     padding: 20px 20px;
 }
 
-.enlaces li .enlace-cabecera {
-    transition: all 0.3s case 0s;
+.enlace-cabecera {
+    display: block;
+    padding: 10px 10px;
+    cursor: pointer;
 }
 
-.enlaces li .enlace-cabecera:hover {
+
+.enlaces-sub li .enlace-cabecera, .perfil .enlace-cabecera, .perfil .enlaces-sub li .enlace-cabecera {
+    display: block;
+    color: white;
+}
+
+.enlaces li .enlace-cabecera:hover, .perfil .enlace-cabecera:hover, .enlaces-sub li .enlace-cabecera:hover {
     color: goldenrod;
 }
 
+
+
 .enlaces-sub {
-    /*background-color: rgba(178, 34, 34, 0.5);*/
     background-color: rgba(178, 34, 34, 0.75);
     display: none;
     list-style: none;
@@ -53,11 +65,7 @@ header {
     position: absolute;
 }
 
-.enlaces li:hover .enlaces-sub {
+.enlaces li:hover .enlaces-sub, .perfil:hover .enlaces-sub {
     display: block;
 }
 
-.enlaces-sub li .enlace-cabecera {
-    display: block;
-    color: white;
-}

@@ -14,7 +14,8 @@ VerificarIndex();
 </head>
 <body>
     <div class="Login-Page">
-    <div class="Slider">
+    
+    <!--div class="Slider">
             <div class="Slides">
                 <div class="Slide">
                     <img src="img/Muni-Hualmay.png">
@@ -23,7 +24,11 @@ VerificarIndex();
                     <img src="img/Muni-Hualmay2.png">
                 </div>
             </div>
-        </div>
+        </div-->
+        <fieldset class="Img">
+            <div class="slide"></div>
+        </fieldset>
+
         <fieldset class="form">
             <form action="php/p_login.php" method="post" class="Login-Form">
                 <label for="usuario">Usuario:</label>
@@ -35,7 +40,7 @@ VerificarIndex();
                 <label for="password">Password:</label>
                 <br>
                 <br>
-                <input type="text" name="txtpassword" placeholder="Contraseña" id="password">
+                <input type="password" name="txtpassword" placeholder="Contraseña" id="password">
                 <br>
                 <br>
                 <input type="submit" value="Iniciar Sesión">

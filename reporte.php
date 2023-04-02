@@ -58,7 +58,7 @@ VerificarSesion();
                 <?php
                 }
                 ?>
-                <td><a href="#"><img src="img/pdf-icon.png" alt="descargar_resolución"></a></td>                
+                <td><a href="#"><img class="img-pdf" src="img/pdf-icon.png" alt="descargar_resolución"></a></td>                
                 <td>
                     <div class="boton"><a href="">Editar</a></div>
                 </td>
