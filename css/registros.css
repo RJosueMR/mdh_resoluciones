@@ -23,181 +23,182 @@ body{
 }
 
 .Grid{
-    display:  inline-block grid;
-    border-radius: 8px;
-    align-items: center;
-    place-content: center;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    grid-auto-rows: minmax(50%, auto);
-  }
+  display:  inline-block grid;
+  border-radius: 8px;
+  align-items: center;
+  place-content: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(50%, auto);
+}
 
-  .Contenedor1{
-    width: 60%;
-    padding: 0%;
-    display: flex;
-    grid-column: 1 / 2;
-    grid-row: 1;
-  }
+.Contenedor1{
+  width: 60%;
+  padding: 0%;
+  display: flex;
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+.Contenedor2{
+  width: 60%;
+  padding: 0%;
+  display: flex;
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+
+.Contenedor3{
+  width: 80%;
+  padding: 0%;
+  display: flex;
+  grid-column: 1 / 2;
+  grid-row: 3;
+}
+
+.Contenedor4{
+  width: 60%;
+  padding: 0%;
+  display: flex;
+  grid-column: 1 / 2;
+  grid-row: 4;
+}
+
+.Contenedor5{
+  width: 70%;
+  padding: 0%;
+  display: flex;
+  grid-column: 1 / 2;
+  grid-row: 5;
+}
+
+.Premisa1{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 70%;
+  padding-right: 20%;
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+.Premisa2{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 70%;
+  padding-right: 26%;
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+
+.Premisa3{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 70%;
+  padding-right: 20.5%;
+  grid-column: 1 / 2;
+  grid-row: 3;
+}
+
+.Premisa4{
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  width: 60%;
+  padding-right: 39%;
+  grid-column: 1 / 2;
+  grid-row: 4;
+}
+
+.Premisa5{
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  width: 80%;
+  padding-right: 12%;
+  grid-column: 1 / 2;
+  grid-row: 5;
+}
+
+.Campo1{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 0%;
+  padding-top: 2%;
+  padding-right: 0%;
+  padding-bottom: 2%;
+  width: 60%;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.Campo2{
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding-left: 16.5%;
+  padding-top: 5%;
+  padding-right: 0%;
+  padding-bottom: 5%;
+  width: 60%;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.Campo3{
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding-left: 0%;
+  padding-top: 5%;
+  padding-right: 30.5%;
+  padding-bottom: 5%;
+  width: 60%;
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.Campo4{
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding-left: 0%;
+  padding-top: 0%;
+  padding-right: 0%;
+  padding-bottom: 5%;
+  width: 60%;
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.Campo5{
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding-left: 24%;
+  padding-top: 0%;
+  padding-right: 0%;
+  padding-bottom: 5%;
+  width: 60%;
+  grid-column: 2;
+  grid-row: 5;
+}
+
+.Boton{
+  display: flex;
+  justify-content: center;
+}
   
-  .Contenedor2{
-    width: 60%;
-    padding: 0%;
-    display: flex;
-    grid-column: 1 / 2;
-    grid-row: 2;
-  }
-  
-  .Contenedor3{
-    width: 80%;
-    padding: 0%;
-    display: flex;
-    grid-column: 1 / 2;
-    grid-row: 3;
-  }
-  
-  .Contenedor4{
-    width: 60%;
-    padding: 0%;
-    display: flex;
-    grid-column: 1 / 2;
-    grid-row: 4;
-  }
-  
-  .Contenedor5{
-    width: 70%;
-    padding: 0%;
-    display: flex;
-    grid-column: 1 / 2;
-    grid-row: 5;
-  }
-  
-  .Premisa1{
-    display: flex;
-    align-items: right;
-    justify-content: right;
-    width: 70%;
-    padding-right: 20%;
-    grid-column: 1 / 2;
-    grid-row: 1;
-  }
-  
-  .Premisa2{
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 70%;
-    padding-right: 26%;
-    grid-column: 1 / 2;
-    grid-row: 2;
-  }
-  
-  .Premisa3{
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 70%;
-    padding-right: 20.5%;
-    grid-column: 1 / 2;
-    grid-row: 3;
-  }
-  
-  .Premisa4{
-    display: flex;
-    align-items: right;
-    justify-content: right;
-    width: 60%;
-    padding-right: 39%;
-    grid-column: 1 / 2;
-    grid-row: 4;
-  }
-  
-  .Premisa5{
-    display: flex;
-    align-items: right;
-    justify-content: right;
-    width: 80%;
-    padding-right: 12%;
-    grid-column: 1 / 2;
-    grid-row: 5;
-  }
-  
-  .Campo1{
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    padding-left: 0%;
-    padding-top: 2%;
-    padding-right: 0%;
-    padding-bottom: 2%;
-    width: 60%;
-    grid-column: 2;
-    grid-row: 1;
-  }
-  
-  .Campo2{
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    padding-left: 16.5%;
-    padding-top: 5%;
-    padding-right: 0%;
-    padding-bottom: 5%;
-    width: 60%;
-    grid-column: 2;
-    grid-row: 2;
-  }
-  
-  .Campo3{
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    padding-left: 0%;
-    padding-top: 5%;
-    padding-right: 30.5%;
-    padding-bottom: 5%;
-    width: 60%;
-    grid-column: 2;
-    grid-row: 3;
-  }
-  
-  .Campo4{
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    padding-left: 0%;
-    padding-top: 0%;
-    padding-right: 0%;
-    padding-bottom: 5%;
-    width: 60%;
-    grid-column: 2;
-    grid-row: 4;
-  }
-  
-  .Campo5{
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    padding-left: 24%;
-    padding-top: 0%;
-    padding-right: 0%;
-    padding-bottom: 5%;
-    width: 60%;
-    grid-column: 2;
-    grid-row: 5;
-  }
-  
-  .Boton{
-    display: flex;
-    justify-content: center;
-  }
 
 .form{
 	width: 80%;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    position: relative;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  position: relative;
 	background: #FFFFFF;
 	max-width: 360px;
 	margin: 0 auto 100px;
@@ -232,8 +233,10 @@ input[type="submit"]:hover {
 }
 
 .caja {
+  align-items: center;
+  justify-content: center;
 	padding: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 3px;
 	border: none;
 	border-radius: 5px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);

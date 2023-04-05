@@ -4,7 +4,7 @@ body{
 }
 .Login-Page{
 	width: 73%;
-    margin-top : 5%;
+    margin-top : 50px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -13,51 +13,51 @@ body{
 	overflow: hidden;
 }
 
-.Slider{
-	position: relative;
-	width: 80%;
-	box-sizing: border-box;
+.Img{
+    width: 100%;
+    box-sizing: border-box;
 	z-index: 1;
 	background: #FFFFFF;
-	margin: 0 auto 16%;
-	box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);;
-	overflow: hidden;
-}
-.Slides{
-	position: relative;
-	width: 100%;
-	height: 420px;
-	display: flex;
-	transition: transform 2 ease;
-	animation: Slide 10s infinite linear;
-}
-
-@keyframes Slide{
-	0%{
-		transform: translateX(0);
-	}
-	100%{
-		transform: translateX(-100%);
-	}
-}
-.Slide{
-	position: relative;
-	background: #FFFFFF;
-	box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	max-width: 900px;
+	margin: 0 auto 100px auto;
+	padding: 5px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 img {
 	height: 100%;
 }
 
+.slide{
+	background-image: url("../img/Muni-Hualmay.png");
+	background-size: 100% 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+    height: 100%;
+	border-radius: 10px;
+	animation: slide 15s infinite linear;
+
+}
+@keyframes slide {
+	25%{background-image: url("../img/Muni-Hualmay.png");}
+	50%{background-image: url("../img/Muni-Hualmay2.png");}
+	75%{background-image: url("../img/logo_mdh.jpg");}
+	100%{background-image: url("../img/Muni-Hualmay.png");}
+}
+
+
+
 .form{
 	width: 80%;
     box-sizing: border-box;
     position: relative;
 	background: #FFFFFF;
-	max-width: 30%;
-	margin: 0 auto 16%;
-	padding: 2%;
+	max-width: 360px;
+	margin: 0 auto 100px;
+	padding: 45px;
 	text-align: center;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
@@ -95,4 +95,17 @@ input[type="submit"]:hover {
 .form .message a{
     color: #0b2cbe;
     text-decoration: none;
+}
+
+fieldset{
+    width: 80%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    position: relative;
+	background: #FFFFFF;
+	max-width: 360px;
+	margin: 0 auto 100px;
+	padding: 45px;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }

@@ -27,4 +27,6 @@ if($r['IdEstado']==1){
     mysql_query($sql1,$cn);
 }
 mysql_close($cn);
+
+header('location: ../reporte.php');
 ?>

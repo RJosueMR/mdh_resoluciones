@@ -15,16 +15,16 @@ VerificarSesion();
     <title>Reporte</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/cabecera.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/reporte.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/botones.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/cabecera.css'>
     <script src='main.js'></script>
 </head>
 <body>
     
     <?php
     include('cabecera.php');
-    $sql = "select r.*, tr.*, e.* from resolucion r, tiporesolucion tr, estado e group by r.NumeroRes order by r.NumeroRes desc";
+    $sql = "select r.*, tr.*, e.* from resolucion r, tiporesolucion tr, estado e where r.IdTipoRes = tr.IdTipoRes and r.IdEstado = e.IdEstado";
     $fila = mysql_query($sql, $cn);
     ?>
 
@@ -61,15 +61,23 @@ VerificarSesion();
                 ?>
                 <td><a href="#"><img class="img-pdf" src="img/pdf-icon.png" alt="descargar_resolución"></a></td>                
                 <td>
-                    <div class="Boton2"><a href="">Editar</a></div>
+                    <div class="Boton2"><a href="registroresolucion.php?num=<?php echo $r["NumeroRes"]; ?>">Editar</a></div>
                 </td>
                 <?php
                 if ($_SESSION["tipousuario"] == "ADMINISTRADOR") {
+                    if ($r["NombreEstado"] == "HABILITADO") {
                 ?>
                 <td>
-                    <div class="Boton2"><a href="php/p_inhabilitar.php?num='<?php echo $r["NumeroRes"]; ?>'">Eliminar</a></div>
+                    <div class="Boton2"><a href="php/p_inhabilitar.php?num=<?php echo $r["NumeroRes"]; ?>">Inhabilitar</a></div>
                 </td>
                 <?php
+                    } else {
+                    ?>
+                        <td>
+                            <div class="Boton2"><a href="php/p_inhabilitar.php?num=<?php echo $r["NumeroRes"]; ?>">Habilitar</a></div>
+                        </td>
+                    <?php
+                    }
                 }
                 ?>
             </tr>

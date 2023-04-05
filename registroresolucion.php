@@ -2,12 +2,20 @@
 
 include("php/funciones.php");
 VerificarDatos();
-
-?>
-
-
-<?php
 include("php/conexion.php");
+
+if (isset($_GET["num"])) {
+    $numres = $_GET["num"];
+
+    $_num = $_GET['num'];
+
+    $sql = "select * from resolucion where NumeroRes = '$_num'";
+
+    $fila=mysql_query($sql,$cn);
+
+    $r=mysql_fetch_array($fila);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +23,7 @@ include("php/conexion.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Resolucion</title>
+    <title>Registrar Resolución</title>
     <link rel='stylesheet' type='text/css' media='screen' href='css/cabecera.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/registros.css'>
 </head>
@@ -28,19 +36,48 @@ include("php/conexion.php");
             <div class="Grid">
                 <div class="Contenedor1">
                     <div class="Premisa1">Numero de Resolución:</div>
-                    <div class="Campo1"><input type="text" name="txt_NumRes" class="caja caja-pequeña" required> - <?php echo date("Y"); ?> - MDH</div>
+                    <div class="Campo1"><input type="text" name="txt_NumRes" class="caja caja-pequeña" required
+                    
+                        <?php
+                        if (isset($_GET["num"])) {
+                            $numero = str_replace("-".date("Y")."-MDH","", $r["NumeroRes"]) ;
+                            echo " disabled value=$numero";
+                        } 
+                        ?>
+
+                    > - <?php echo date("Y"); ?> - MDH</div>
                 </div>
                 <div class="Contenedor2">
                     <div class="Premisa2">Contenido:</div>
-                    <div class="Campo2"><textarea name="txt_ContRes" id="" class="caja caja-mediana" cols="30" rows="10" required></textarea></div>
+                    <div class="Campo2"><textarea name="txt_ContRes" id="" class="caja caja-mediana" cols="30" rows="10" required><?php                        
+                        if (isset($_GET["num"])) {
+                            echo utf8_encode($r["ContenidoRes"]);
+                        }                         
+                        ?>                   
+
+                    </textarea></div>
                 </div>
                 <div class="Contenedor3">
                     <div class="Premisa3">Fecha Publicación:</div>
-                    <div class="Campo3"><input type="date" name="txt_FechPub" class="caja caja-mediana" required></div>
+                    <div class="Campo3"><input type="date" name="txt_FechPub" class="caja caja-mediana" 
+                        <?php
+                        if (isset($_GET["num"])) {
+                            $fecha = $r["FechaPublicRes"];
+                            echo "value=$fecha";
+                        }                         
+                        ?>                    
+                    required></div>
                 </div>
                 <div class="Contenedor4">
-                    <div class="Premisa4">Tipo Resolucion:</div>
-                    <div class="Contenedor4"><select name="lst_TipoRes" class="caja caja-mediana" required>
+                    <div class="Premisa4">Tipo Resolución:</div>
+                    <div class="Contenedor4"><select name="lst_TipoRes" class="caja caja-mediana" 
+                        <?php
+                        if (isset($_GET["num"])) {
+                            $tipo = $r["IdTipoRes"];
+                            echo "value=$tipo";
+                        }                         
+                        ?>      
+                    required>
                         <?php
                         $sql = "select * from tiporesolucion";
                         $fila = mysql_query($sql,$cn);
@@ -54,10 +91,25 @@ include("php/conexion.php");
                 </div>
                 <div class="Contenedor5">
                     <div class="Premisa5">Subir resolución:</div>
-                    <div class="Campo5"><input type="file" name="archivo" required></div>
+                    <div class="Campo5"><input type="file" name="archivo" 
+                        <?php
+                        if (isset($_GET["num"])) {
+                            $narchivo = "resoluciones/".$r["NumeroRes"].".pdf";
+                            echo "value=$narchivo";
+                        }                         
+                        ?>
+                    required></div>
                 </div>
                 <br>
-                <div class="Boton"><input type="submit" value="Agregar"></div>
+                <div class="Boton"><input type="submit" 
+                        <?php
+                        if (isset($_GET["num"])) {
+                            echo "value=Guardar";
+                        } else {
+                            echo "value=Agregar";
+                        }                     
+                        ?>
+                ></div>
             </div>
         </form>
     </div>
