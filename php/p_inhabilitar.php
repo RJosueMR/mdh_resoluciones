@@ -15,13 +15,15 @@ $r=mysql_fetch_array($fila);
 if($r['IdEstado']==1){
 
     $sql1="update resolucion
-    set IdEstado = 2";
+    set IdEstado = 2
+    where NumeroRes = '$_num'";
     mysql_query($sql1,$cn);
 
 }elseif($r['IdEstado']==2){
 
     $sql1="update resolucion
-    set IdEstado = 1";
+    set IdEstado = 1
+    where NumeroRes = '$_num'";
     mysql_query($sql1,$cn);
 }
 mysql_close($cn);
