@@ -24,7 +24,7 @@ VerificarSesion();
     $r = mysql_fetch_array($fila);
     ?>
     <div class="contenedor contenedor-res">
-        <form action="#" method="post" enctype="multipart/form-data">
+        <form action="p_actualizardatosusuario.php" method="post" enctype="multipart/form-data">
             <div class="Grid">
             <div class="Contenedor1">
                     <div class="Premisa1">Codigo:</div>
@@ -64,10 +64,13 @@ VerificarSesion();
                     <?php
                             $_m="";
                             $_f="";
-                            if($r['SexoUsu']=='M'){
-                                $_m=" checked";
-                            }else{
-                                $_f=" checked";    
+                            if($r['SexoUsu'] != null){
+
+                                if($r['SexoUsu']=='M'){
+                                    $_m=" checked";
+                                }else{
+                                    $_f=" checked";    
+                                }
                             }
                             ?>
                         <input type="radio" name="opc_sexo" id="rbtnM" value="M"<?php echo $_m;?> disabled>Masculino
@@ -78,11 +81,11 @@ VerificarSesion();
                     <div class="Premisa10">F. Nacimiento:</div>
                     <div class="Campo10"><input type="date" id="date_FechaNac" name="txt_FechaNac" class="caja caja-mediana" value="<?php echo ($r['FechaNacUsu']);?>" readonly></div>
                 </div>
-                <br>
+                <br>                
                 <div class="Boton" id="contenedor-submit"><!-- <input id="btn_enviar" type="submit" value="Guardar"> --></div>
-            </div>            
+            </div>
         </form>
-        <button class="Boton" id="btn_editar" onclick="CambiarEntradas()">Editar</button>
+        
     </div>
 </body>
 </html>

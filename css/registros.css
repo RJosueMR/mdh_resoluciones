@@ -22,109 +22,192 @@ body{
 }
 
 .Grid{
-    display: grid;
+    display:  inline-block grid;
+    border: 2px solid black;
+    border-radius: 8px;
     align-items: center;
     place-content: center;
     justify-content: center;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
-    grid-auto-rows: minmax(50px, auto);
+    grid-auto-rows: minmax(50%, auto);
 }
 
 .Contenedor1{
+    width: 100%;
+    border: 1px solid black;
+    padding: 0%;
     display: flex;
     grid-column: 1 / 2;
     grid-row: 1;
-}
-
-.Contenedor2{
+  }
+  
+  .Contenedor2{
+    width: 100%;
+    border: 1px solid black;
+    padding: 0%;
     display: flex;
     grid-column: 1 / 2;
     grid-row: 2;
-}
-
-.Contenedor3{
+  }
+  
+  .Contenedor3{
+    width: 100%;
+    border: 1px solid black;
+    padding: 0%;
     display: flex;
     grid-column: 1 / 2;
     grid-row: 3;
-}
-
-.Contenedor4{
+  }
+  
+  .Contenedor4{
+    width: 100%;
+    border: 1px solid black;
+    padding: 0%;
     display: flex;
     grid-column: 1 / 2;
     grid-row: 4;
-}
-
-.Contenedor5{
+  }
+  
+  .Contenedor5{
+    width: 100%;
+    border: 1px solid black;
+    padding: 0%;
     display: flex;
     grid-column: 1 / 2;
     grid-row: 5;
-}
-
-.Premisa1{
-    width: 500px;
-    grid-column: 1 / 2;
-    grid-row: 1;
-}
-
-.Premisa2{
-    width: 500px;
-    grid-column: 1 / 2;
-    grid-row: 2;
-}
-
-.Premisa3{
-    width: 500px;
-    grid-column: 1 / 2;
-    grid-row: 3;
-}
-
-.Premisa4{
-    width: 500px;
-    grid-column: 1 / 2;
-    grid-row: 4;
-}
-
-.Premisa5{
-    width: 500px;
-    grid-column: 1 / 2;
-    grid-row: 5;
-}
-
-.Campo1{
-    width: 500px;
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.Campo2{
-    width: 500px;
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.Campo3{
-    width: 500px;
-    grid-column: 2;
-    grid-row: 3;
-}
-
-.Campo4{
-    width: 500px;
-    grid-column: 2;
-    grid-row: 4;
-}
-
-.Campo5{
-    width: 500px;
-    grid-column: 2;
-    grid-row: 5;
-}
-
-.Boton{
+  }
+  
+  .Premisa1{
+    display: flex;
     align-items: center;
-    grid-row: 6;
-}
+    justify-content: center;
+    width: 50%;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+  
+  .Premisa2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+  
+  .Premisa3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    grid-column: 1 / 2;
+    grid-row: 3;
+  }
+  
+  .Premisa4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    grid-column: 1 / 2;
+    grid-row: 4;
+  }
+  
+  .Premisa5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    grid-column: 1 / 2;
+    grid-row: 5;
+  }
+  
+  .Campo1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0%;
+    padding-top: 2%;
+    padding-right: 0%;
+    padding-bottom: 2%;
+    width: 50%;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  .Campo2{
+    display: flex;
+    justify-content: center;
+    padding-left: 0%;
+    padding-top: 5%;
+    padding-right: 0%;
+    padding-bottom: 5%;
+    width: 50%;
+    border-bottom: 1px solid black;
+    border-left: 2px solid black;
+    grid-column: 2;
+    grid-row: 2;
+  }
+  
+  .Campo3{
+    display: flex;
+    justify-content: center;
+    padding-left: 0%;
+    padding-top: 5%;
+    padding-right: 0%;
+    padding-bottom: 5%;
+    width: 50%;
+    border-bottom: 1px solid black;
+    border-left: 2px solid black;
+    grid-column: 2;
+    grid-row: 3;
+  }
+  
+  .Campo4{
+    display: flex;
+    justify-content: center;
+    padding-left: 0%;
+    padding-top: 5%;
+    padding-right: 0%;
+    padding-bottom: 5%;
+    width: 50%;
+    border-bottom: 1px solid black;
+    border-left: 2px solid black;
+    grid-column: 2;
+    grid-row: 4;
+  }
+  
+  .Campo5{
+    display: flex;
+    justify-content: center;
+    padding-left: 0%;
+    padding-top: 5%;
+    padding-right: 0%;
+    padding-bottom: 5%;
+    width: 50%;
+    border-bottom: 1px solid black;
+    border-left: 2px solid black;
+    grid-column: 2;
+    grid-row: 5;
+  }
+  
+  .Boton{
+    display: flex;
+    justify-content: center;
+  }
 
 .form{
 	width: 80%;
