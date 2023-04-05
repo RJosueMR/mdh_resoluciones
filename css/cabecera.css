@@ -69,3 +69,24 @@ header {
     display: block;
 }
 
+.contenedor-boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.Boton2 {
+    padding: 10px 20px;
+	background-color: #3498db;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+    margin: auto;
+}
+
+.Boton2:hover {
+	background-color: #2980b9;
+}

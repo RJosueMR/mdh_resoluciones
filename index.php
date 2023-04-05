@@ -1,6 +1,7 @@
 <?php
 include('php/funciones.php');
 VerificarIndex();
+
 ?>
 <!DOCTYPE html>
 <html>

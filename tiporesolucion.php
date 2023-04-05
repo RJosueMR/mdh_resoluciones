@@ -1,3 +1,10 @@
+<?php
+
+include("php/funciones.php");
+VerificarDatos();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

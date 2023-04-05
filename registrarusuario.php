@@ -1,7 +1,8 @@
 <?php
 
-include("php/conexion.php");
 include('php/funciones.php');
+VerificarDatos();
+include("php/conexion.php");
 VerificarSesion();
 ?>
 <!DOCTYPE html>
@@ -10,7 +11,7 @@ VerificarSesion();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Resolucion</title>
+    <title>Registrar Asistente</title>
     <link rel='stylesheet' type='text/css' media='screen' href='css/cabecera.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/registros.css'>
     <script src="js/editardatos.js"></script>
@@ -24,8 +25,9 @@ VerificarSesion();
     $r = mysql_fetch_array($fila);
     ?>
     <div class="contenedor contenedor-res">
-        <form action="p_actualizardatosusuario.php" method="post" enctype="multipart/form-data">
-            <div class="Grid">
+    <div class="Grid">
+        <form action="php/p_actualizardatosusuario.php" method="post" enctype="multipart/form-data">
+            
             <div class="Contenedor1">
                     <div class="Premisa1">Codigo:</div>
                     <div class="Campo1"><input type="text" id="txt_codigo" name="txt_codigo" class="caja caja-mediana" value="<?php echo $r['CodigoUsu'];?>" readonly></div>
@@ -46,46 +48,10 @@ VerificarSesion();
                     <div class="Premisa5">DNI:</div>
                     <div class="Contenedor5"><input type="text" id="txt_dni" name="txt_dni" class="caja caja-mediana" value="<?php echo utf8_encode($r['DNIUsu']);?>" readonly></div>
                 </div>
-                <div class="Contenedor6">
-                    <div class="Premisa6">Direccion:</div>
-                    <div class="Campo6"><input type="text" id="txt_direccion" name="txt_direccion" class="caja caja-mediana" value="<?php echo utf8_encode($r['DireccionUsu']);?>" readonly></div>
-                </div>
-                <div class="Contenedor7">
-                    <div class="Premisa7">Celular:</div>
-                    <div class="Campo7"><input type="text" id="txt_celular" name="txt_celular" class="caja caja-mediana" value="<?php echo utf8_encode($r['CelularUsu']);?>" readonly></div>
-                </div>
-                <div class="Contenedor8">
-                    <div class="Premisa8">Correo:</div>
-                    <div class="Campo8"><input type="text" id="txt_email" name="txt_email" class="caja caja-mediana" value="<?php echo utf8_encode($r['EmailUsu']);?>" readonly></div>
-                </div>
-                <div class="Contenedor9">
-                    <div class="Premisa9">Sexo:</div>
-                    <div class="Campo9">
-                    <?php
-                            $_m="";
-                            $_f="";
-                            if($r['SexoUsu'] != null){
-
-                                if($r['SexoUsu']=='M'){
-                                    $_m=" checked";
-                                }else{
-                                    $_f=" checked";    
-                                }
-                            }
-                            ?>
-                        <input type="radio" name="opc_sexo" id="rbtnM" value="M"<?php echo $_m;?> disabled>Masculino
-                        <input type="radio" name="opc_sexo" id="rbtnF" value="F"<?php echo $_f;?> disabled>Femenino
-                </div>
-                </div>
-                <div class="Contenedor10">
-                    <div class="Premisa10">F. Nacimiento:</div>
-                    <div class="Campo10"><input type="date" id="date_FechaNac" name="txt_FechaNac" class="caja caja-mediana" value="<?php echo ($r['FechaNacUsu']);?>" readonly></div>
-                </div>
-                <br>                
                 <div class="Boton" id="contenedor-submit"><!-- <input id="btn_enviar" type="submit" value="Guardar"> --></div>
-            </div>
+            
         </form>
-        
+        </div>
     </div>
 </body>
 </html>

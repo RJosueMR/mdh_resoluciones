@@ -22,7 +22,7 @@
         <div class="perfil">
             <label class="enlace-cabecera">Bienvenido</label>
             <ul class="enlaces-sub"> 
-                <li><a class="enlace-cabecera" href="datosusuario.php">Revisar Datos</a></li>
+                <li><a class="enlace-cabecera" href="actualizardatosusuario.php">Revisar Datos</a></li>
                 <li><a class="enlace-cabecera" href="php/p_cerrarsesion.php">Cerrar Sesión</a></li>
             </ul>
         </div>        

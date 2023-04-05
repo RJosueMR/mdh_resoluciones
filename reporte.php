@@ -1,7 +1,8 @@
 <?php
 
-include("php/conexion.php");
 include('php/funciones.php');
+VerificarDatos();
+include("php/conexion.php");
 VerificarSesion();
 
 ?>
@@ -60,13 +61,13 @@ VerificarSesion();
                 ?>
                 <td><a href="#"><img class="img-pdf" src="img/pdf-icon.png" alt="descargar_resolución"></a></td>                
                 <td>
-                    <div class="boton"><a href="">Editar</a></div>
+                    <div class="Boton2"><a href="">Editar</a></div>
                 </td>
                 <?php
                 if ($_SESSION["tipousuario"] == "ADMINISTRADOR") {
                 ?>
                 <td>
-                    <div class="boton"><a href="">Eliminar</a></div>
+                    <div class="Boton2"><a href="php/p_inhabilitar.php?num='<?php echo $r["NumeroRes"]; ?>'">Eliminar</a></div>
                 </td>
                 <?php
                 }

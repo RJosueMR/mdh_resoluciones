@@ -4,7 +4,7 @@ body{
 }
 
 .contenedor {
-    background-color: white;
+    background-color: rgb(241, 203, 203);
     box-shadow: 5px 5px 20px black;
     margin: auto;
     margin-top: 50px;
@@ -17,13 +17,13 @@ body{
 }
 
 .contenedor-res {
-    min-width: 1000px;
-    width: 60%;
+    min-width: 650px;
+    width: 20%;
+    display: grid;
 }
 
 .Grid{
     display:  inline-block grid;
-    border: 2px solid black;
     border-radius: 8px;
     align-items: center;
     place-content: center;
@@ -31,11 +31,10 @@ body{
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
     grid-auto-rows: minmax(50%, auto);
-}
+  }
 
-.Contenedor1{
-    width: 100%;
-    border: 1px solid black;
+  .Contenedor1{
+    width: 60%;
     padding: 0%;
     display: flex;
     grid-column: 1 / 2;
@@ -43,8 +42,7 @@ body{
   }
   
   .Contenedor2{
-    width: 100%;
-    border: 1px solid black;
+    width: 60%;
     padding: 0%;
     display: flex;
     grid-column: 1 / 2;
@@ -52,8 +50,7 @@ body{
   }
   
   .Contenedor3{
-    width: 100%;
-    border: 1px solid black;
+    width: 80%;
     padding: 0%;
     display: flex;
     grid-column: 1 / 2;
@@ -61,8 +58,7 @@ body{
   }
   
   .Contenedor4{
-    width: 100%;
-    border: 1px solid black;
+    width: 60%;
     padding: 0%;
     display: flex;
     grid-column: 1 / 2;
@@ -70,8 +66,7 @@ body{
   }
   
   .Contenedor5{
-    width: 100%;
-    border: 1px solid black;
+    width: 70%;
     padding: 0%;
     display: flex;
     grid-column: 1 / 2;
@@ -80,11 +75,10 @@ body{
   
   .Premisa1{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    align-items: right;
+    justify-content: right;
+    width: 70%;
+    padding-right: 20%;
     grid-column: 1 / 2;
     grid-row: 1;
   }
@@ -92,10 +86,9 @@ body{
   .Premisa2{
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 50%;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    justify-content: right;
+    width: 70%;
+    padding-right: 26%;
     grid-column: 1 / 2;
     grid-row: 2;
   }
@@ -103,103 +96,94 @@ body{
   .Premisa3{
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 50%;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    justify-content: right;
+    width: 70%;
+    padding-right: 20.5%;
     grid-column: 1 / 2;
     grid-row: 3;
   }
   
   .Premisa4{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    align-items: right;
+    justify-content: right;
+    width: 60%;
+    padding-right: 39%;
     grid-column: 1 / 2;
     grid-row: 4;
   }
   
   .Premisa5{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    align-items: right;
+    justify-content: right;
+    width: 80%;
+    padding-right: 12%;
     grid-column: 1 / 2;
     grid-row: 5;
   }
   
   .Campo1{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     padding-left: 0%;
     padding-top: 2%;
     padding-right: 0%;
     padding-bottom: 2%;
-    width: 50%;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
+    width: 60%;
     grid-column: 2;
     grid-row: 1;
   }
   
   .Campo2{
     display: flex;
-    justify-content: center;
-    padding-left: 0%;
+    align-items: left;
+    justify-content: left;
+    padding-left: 16.5%;
     padding-top: 5%;
     padding-right: 0%;
     padding-bottom: 5%;
-    width: 50%;
-    border-bottom: 1px solid black;
-    border-left: 2px solid black;
+    width: 60%;
     grid-column: 2;
     grid-row: 2;
   }
   
   .Campo3{
     display: flex;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     padding-left: 0%;
     padding-top: 5%;
-    padding-right: 0%;
+    padding-right: 30.5%;
     padding-bottom: 5%;
-    width: 50%;
-    border-bottom: 1px solid black;
-    border-left: 2px solid black;
+    width: 60%;
     grid-column: 2;
     grid-row: 3;
   }
   
   .Campo4{
     display: flex;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     padding-left: 0%;
-    padding-top: 5%;
+    padding-top: 0%;
     padding-right: 0%;
     padding-bottom: 5%;
-    width: 50%;
-    border-bottom: 1px solid black;
-    border-left: 2px solid black;
+    width: 60%;
     grid-column: 2;
     grid-row: 4;
   }
   
   .Campo5{
     display: flex;
-    justify-content: center;
-    padding-left: 0%;
-    padding-top: 5%;
+    align-items: left;
+    justify-content: left;
+    padding-left: 24%;
+    padding-top: 0%;
     padding-right: 0%;
     padding-bottom: 5%;
-    width: 50%;
-    border-bottom: 1px solid black;
-    border-left: 2px solid black;
+    width: 60%;
     grid-column: 2;
     grid-row: 5;
   }

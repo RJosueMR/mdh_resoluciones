@@ -1,4 +1,12 @@
 <?php
+
+include("php/funciones.php");
+VerificarDatos();
+
+?>
+
+
+<?php
 include("php/conexion.php");
 ?>
 <!DOCTYPE html>

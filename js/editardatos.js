@@ -18,8 +18,6 @@ function CambiarEntradas(){
 
     var botonEditar = document.getElementById("btn_editar");
 
-    alert(botonEditar.textContent);
-
     if (botonEditar.textContent == 'Editar') {
 
         txtDireccion.removeAttribute('readonly');
@@ -42,6 +40,8 @@ function CambiarEntradas(){
         rbtnM.setAttribute('disabled', 'disabled');
         rbtnF.setAttribute('disabled', 'disabled');
         dateFechaNac.setAttribute('readonly', 'readonly');
+
+        document.getElementById("contenedor-submit").innerHTML = '';
 
         botonEditar.textContent = "Editar";
     }
