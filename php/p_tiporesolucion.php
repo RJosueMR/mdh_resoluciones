@@ -5,7 +5,8 @@ $_nombre = utf8_decode($_POST['txt_tipoResolucion']);
 $sql="select * from tiporesolucion";
 
 //Evaluamos si ya existe el nombre tipo de resolucion
-while($r=mysql_query($sql,$cn))
+$fila=mysql_query($sql,$cn);
+while($r=mysql_fetch_array($fila))
 {
 
     if($r['NombreTipoRes']==$_nombre){

@@ -14,7 +14,7 @@ if (isset($_GET["num"])) {
     $fila=mysql_query($sql,$cn);
 
     $r=mysql_fetch_array($fila);
-}
+} 
 
 ?>
 <!DOCTYPE html>
@@ -26,6 +26,7 @@ if (isset($_GET["num"])) {
     <title>Registrar Resolución</title>
     <link rel='stylesheet' type='text/css' media='screen' href='css/cabecera.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/registros.css'>
+    <link rel="shortcut icon" href="img/logo_mdh.png">
 </head>
 <body>
     <?php 
@@ -41,11 +42,11 @@ if (isset($_GET["num"])) {
                         <?php
                         if (isset($_GET["num"])) {
                             $numero = str_replace("-".date("Y")."-MDH","", $r["NumeroRes"]) ;
-                            echo " disabled value=$numero";
+                            echo " readonly value=$numero";
                         } 
                         ?>
 
-                    > - <?php echo date("Y"); ?> - MDH</div>
+                    > - <p><?php echo date("Y"); ?> </p>- <p>MDH</p></div>
                 </div>
                 <div class="Contenedor2">
                     <div class="Premisa2">Contenido:</div>
@@ -95,18 +96,20 @@ if (isset($_GET["num"])) {
                         <?php
                         if (isset($_GET["num"])) {
                             $narchivo = "resoluciones/".$r["NumeroRes"].".pdf";
-                            echo "value=$narchivo";
+                            echo " value=$narchivo";
+                        }else{
+                            echo"required";
                         }                         
                         ?>
-                    required></div>
+                    ></div>
                 </div>
                 <br>
                 <div class="Boton"><input type="submit" 
                         <?php
                         if (isset($_GET["num"])) {
-                            echo "value=Guardar";
+                            echo "name=Guardar value=Guardar";
                         } else {
-                            echo "value=Agregar";
+                            echo "name=Agregar value=Agregar";
                         }                     
                         ?>
                 ></div>

@@ -17,10 +17,32 @@ header {
     background-color: firebrick;
 }
 
-.logo, .perfil-img {
-    height: 50px;
-    width: 50px;
+.logo {
+    height: 70px;
+}
+
+.perfil-img {
+    height: 60px;
+    width: 60px;
     cursor: pointer;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: goldenrod;
+    border-width: 2px;
+}
+
+.perfil-img:hover {
+    border-width: 3px;
+    box-shadow: 0 0 20px goldenrod;
+    filter: brightness(70%);
+}
+
+.perfil-editar {
+    width: 60%;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
 }
 
 .enlaces {
@@ -73,6 +95,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto; 
     width: 100%;
 }
 
@@ -87,6 +110,20 @@ header {
     margin: auto;
 }
 
+.Boton2 a {
+    color: white;
+    text-decoration: none;
+}
+
 .Boton2:hover {
 	background-color: #2980b9;
+}
+
+.contenedor-filtros {
+    display: flex;
+    align-items: center;
+    justify-content: left;  
+    margin: auto;  
+    width: 85%;
+    gap: 30px;    
 }

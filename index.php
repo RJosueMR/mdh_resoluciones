@@ -11,11 +11,12 @@ VerificarIndex();
     <title>Iniciar Sesión</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <link rel="shortcut icon" href="img/logo_mdh.png">
     <script src='main.js'></script>
 </head>
 <body>
     <div class="Login-Page">
-    
+     
     <!--div class="Slider">
             <div class="Slides">
                 <div class="Slide">
@@ -45,7 +46,7 @@ VerificarIndex();
                 <br>
                 <br>
                 <input type="submit" value="Iniciar Sesión">
-                <p class="message">¿Olvidaste Tu contraseña?<a href="#"><br>Recuperar Contraseña</a></p>
+                <p class="message">¿Olvidaste Tu contraseña?<a href="recuperarcontra.php"><br>Recuperar Contraseña</a></p>
                 <br>
                 <br>
             </form>

@@ -13,36 +13,57 @@ VerificarSesion();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Asistente</title>
     <link rel='stylesheet' type='text/css' media='screen' href='css/cabecera.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/registros.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/registros3.css'>
+    <link rel="shortcut icon" href="img/logo_mdh.png">
     <script src="js/editardatos.js"></script>
 </head>
 <body>
     <?php 
     include("cabecera.php");
-    $_CodUsuario = $_SESSION["usuario"];
-    $sql = "select u.*, tu.* from usuario u, tipousuario tu where u.CodigoUsu = '$_CodUsuario'";
-    $fila = mysql_query($sql, $cn);
-    $r = mysql_fetch_array($fila);
 
     //consulta para codigo
-    $sqlCodigo="SELECT u.CodigoUsu
-                FROM usuario u, tipousuario tp
-                WHERE u.IdtipoUsu = tp.IdtipoUsu
-                        AND tp.IdTipoUsu =1
-                ORDER BY u.CodigoUsu DESC";
+    $sqlCodigo="select  u.CodigoUsu
+                from usuario u, tipousuario tp
+                where u.IdtipoUsu = tp.IdtipoUsu
+                        and tp.IdTipoUsu =2
+                order by u.CodigoUsu desc";
     $filacod=mysql_query($sqlCodigo,$cn);
-    $rcod=mysql_fetch_array($filacod);
-    $eval=explode("I",$rcod['CodigoUsu']);
-    $Nuevoeval=Integer.parseInt($eval[1]);
+    $CodigoNuevo= "ASI000001";
+   
+    while($rcod=mysql_fetch_array($filacod)){
+        
+            $eval=explode("I",$rcod['CodigoUsu']);
+                $Nuevoeval=$eval[1];
+                $codi = $Nuevoeval + 1;
+                if($codi<=9){
+                        $CodigoNuevo = $eval[0] ."I00000" .$codi;
+                       
+                }elseif($codi>=10 && $codi<100){
+                        $CodigoNuevo = $eval[0] ."I0000" .$codi;
+                        
+                }elseif($codi>=100 && $codi<1000){
+                    $CodigoNuevo = $eval[0] ."I00" .$codi;
+                   
+                }elseif($codi>=1000 && $codi<10000){
+                    $CodigoNuevo = $eval[0]."I0" .$codi;
+                    
+                }else{
+                    $CodigoNuevo = $eval[0] ."I" .$codi;
+                   
+                }
+                break;           
+    }
+
     
+     
 
     ?>
     <div class="contenedor contenedor-res">
     <div class="Grid">
-        <form action="php/p_actualizardatosusuario.php" method="post" enctype="multipart/form-data">
+        <form action="php/p_registrarusuario.php" method="post" >
                 <div class="Contenedor1">
-                    <div class="Premisa1">Codigo:</div>
-                    <div class="Campo1"><input type="text" id="txt_codigo" name="txt_codigo" class="caja caja-mediana" ></div>
+                    <div class="Premisa1">Código:</div>
+                    <div class="Campo1"><input type="text" id="txt_codigo" name="txt_codigo" class="caja caja-mediana" readonly value="<?php echo $CodigoNuevo;?>"></div>
                 </div>
                 <div class="Contenedor2">
                     <div class="Premisa2">Nombre:</div>
@@ -58,7 +79,7 @@ VerificarSesion();
                 </div>
                 <div class="Contenedor5">
                     <div class="Premisa5">DNI:</div>
-                    <div class="Contenedor5"><input type="text" id="txt_dni" name="txt_dni" class="caja caja-mediana"></div>
+                    <div class="Campo5"><input type="text" id="txt_dni" name="txt_dni" class="caja caja-mediana"></div>
                 </div>
                 <div class="Boton" id="contenedor-submit"><input id="btn_enviar" type="submit" value="Guardar"> </div>
             

@@ -14,6 +14,7 @@ VerificarDatos();
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/cabecera.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/registros.css'>
+    <link rel="shortcut icon" href="img/logo_mdh.png">
     <title>Tipo de Resolución</title>
 </head>
 <body>
@@ -21,7 +22,7 @@ VerificarDatos();
     include("cabecera.php");
     ?>
     <div class="contenedor contenedor-tipor">
-        <form action="../p_tiporesolucion.php" method="post">
+        <form action="php/p_tiporesolucion.php" method="post">
             <table>
                 <tr>
                     <td>Nombre Tipo de Resolución</td>

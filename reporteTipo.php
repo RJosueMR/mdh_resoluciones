@@ -18,8 +18,6 @@ VerificarSesion();
     <link rel='stylesheet' type='text/css' media='screen' href='css/botones.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/cabecera.css'>
     <link rel="shortcut icon" href="img/logo_mdh.png">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src='js/editardatos.js'></script>
 </head>
 <body>
     
@@ -28,87 +26,36 @@ VerificarSesion();
 
 
     
-    
     //$sql = "select r.*, tr.*, e.* from resolucion r, tiporesolucion tr, estado e where r.IdTipoRes = tr.IdTipoRes and r.IdEstado = e.IdEstado order by r.FechaPublicRes desc";
     //Paginacion
     
-    if (isset($_GET["valor"])) {
-        $v = $_GET["valor"];
-
-        
-        $sql = "select r.*, tr.*, e.* from resolucion r, tiporesolucion tr, estado e where r.IdTipoRes = tr.IdTipoRes and r.IdEstado = e.IdEstado order by r.FechaPublicRes desc limit $v,10";
-        
-        //$sql = "select * from alumno limit $v,30";
-    }else{
-        
-        $sql = "select r.*, tr.*, e.* from resolucion r, tiporesolucion tr, estado e where r.IdTipoRes = tr.IdTipoRes and r.IdEstado = e.IdEstado order by r.FechaPublicRes desc limit 0,10";
-    }
+    
 
 
-    $fila = mysql_query($sql, $cn);
+   
     ?>
 
     <div class="contenedor-tabla">
 
         <br>
-        <div>
+
+        <form action="reporte.php" method="post">
             <div class="contenedor-filtros">
-                Filtro:
-                <input type="text" name="txtfiltro" id="filtro">
-            </div>
-        </div>
-
-        <br>
-
-        <div>
-            <form action="reportefecha.php" method="post">
-                <div class="contenedor-filtros">
-                    Fecha de Inicio:
-                    <input type="date" name="fechainicio">
-                    Fecha de Fin:
-                    <input type="date" name="fechafin">
-                    <input type="submit" value="Filtrar por Fechas">
-                </div>
-            </form>
-        </div>
-
-        <br>
-
-        <form action="reporteTipo.php" method="post">
-            <div class="contenedor-filtros">
-                Tipo Resolución:
-                <select name="lst_TR" id="">
-                        <?php
-                        $tipor= "select * from tiporesolucion";
-                        $filatipor =mysql_query($tipor,$cn);
-                        while($rtipo=mysql_fetch_array($filatipor)){
-                        ?>
-                        <option value="<?php echo $rtipo['IdTipoRes'];?>"><?php echo utf8_encode($rtipo['NombreTipoRes']);?></option>
-                        <?php
-                        }
-                        ?>
-
-                    </select>
-                    <input type="submit" value="Filtrar por Tipo">
+                <input type="submit" value="Atras">
             </div>
         </form>
-            
-            <script>
-                $(document).ready(function(){
-                    $("#filtro").on("keyup", function() {
-                    var value = $(this).val().toLowerCase();
-                        $(".contenedor-tabla tr.fila-datos").filter(function() {
-                            var tdValue = $(this).find('td:eq(0)').text().toLowerCase(); // Evalúa el contenido del primer <td> de la fila 
-                            var tdValue1 = $(this).find('td:eq(2)').text().toLowerCase();// Evalúa el contenido del tercer <td> de la fila 
-                            if (tdValue.indexOf(value) > -1 || tdValue1.indexOf(value) > -1) {
-                                    $(this).show(); // Si el valor está presente en el <td>, muestra la fila
-                                } else {
-                                    $(this).hide(); // Si el valor no está presente en el <td>, oculta la fila
-                                }
-                        });
-                    });
-                });
-            </script>
+        <?php
+         
+            $_tipo = $_POST['lst_TR'];
+           
+                $sql = "select r.*, tr.*, e.* from resolucion r, tiporesolucion tr, estado e 
+                        where r.IdTipoRes = tr.IdTipoRes and r.IdEstado = e.IdEstado and tr.IdTipoRes = $_tipo
+                        order by r.FechaPublicRes desc";
+           
+        
+         $fila = mysql_query($sql, $cn);
+        ?>  
+
 
         <table class="tabla-reporte">
             <tr class="fila">            
@@ -176,36 +123,8 @@ VerificarSesion();
             ?>
             
         </table>
-        <br>
-        <br>
-        <?php
-		$cantidad = 10;
-       
-            $sql1 = "select r.*, tr.*, e.* from resolucion r, tiporesolucion tr, estado e where r.IdTipoRes = tr.IdTipoRes and r.IdEstado = e.IdEstado order by r.FechaPublicRes desc";
-        
-		
-		$filas = mysql_query($sql1);
-		$total = mysql_num_rows($filas);
-
-		$numpaginas = $total/$cantidad;
-
-		$numpaginas = ceil($numpaginas);
-
-		for ($i=0; $i < $numpaginas ; $i++) { 
-			$parametro = $i * 10;
-
-            ?>
-
-            <div class="contenedor-boton">
-                <a href = 'reporte.php?valor=<?php echo $parametro; ?>'><?php echo ($i+1); ?></a>&nbsp;&nbsp;&nbsp;&nbsp
-            </div>
-
-            <?php
-		}
-		?>
-
+      
     </div>
-    <br>
 
 </body>
 </html>

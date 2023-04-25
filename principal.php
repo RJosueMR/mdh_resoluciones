@@ -2,7 +2,7 @@
 
 include("php/funciones.php");
 VerificarDatos();
-
+VerificarSesion();
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +14,7 @@ VerificarDatos();
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/cabecera.css'>
+    <link rel="shortcut icon" href="img/logo_mdh.png">
     <script src='main.js'></script>
 </head>
 <body>

@@ -1,4 +1,6 @@
 <?php
+
+
 session_start();
 //para verificar si existe una sesion
 function VerificarSesion(){
@@ -48,4 +50,6 @@ function VerificarDatos()
         mysql_close($cn);
     }
 }
+
+
 ?>

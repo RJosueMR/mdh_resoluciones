@@ -12,7 +12,8 @@ VerificarSesion();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Resolucion</title>
     <link rel='stylesheet' type='text/css' media='screen' href='css/cabecera.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/registros.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/registros2.css'>
+    <link rel="shortcut icon" href="img/logo_mdh.png">
     <script src="js/editardatos.js"></script>
 </head>
 <body>
@@ -28,7 +29,7 @@ VerificarSesion();
         <form action="php/p_actualizardatosusuario.php" method="post" enctype="multipart/form-data">
             
             <div class="Contenedor1">
-                    <div class="Premisa1">Codigo:</div>
+                    <div class="Premisa1">Código:</div>
                     <div class="Campo1"><input type="text" id="txt_codigo" name="txt_codigo" class="caja caja-mediana" value="<?php echo $r['CodigoUsu'];?>" readonly></div>
                 </div>
                 <div class="Contenedor2">
@@ -45,10 +46,10 @@ VerificarSesion();
                 </div>
                 <div class="Contenedor5">
                     <div class="Premisa5">DNI:</div>
-                    <div class="Contenedor5"><input type="text" id="txt_dni" name="txt_dni" class="caja caja-mediana" value="<?php echo utf8_encode($r['DNIUsu']);?>" readonly></div>
+                    <div class="Campo5"><input type="text" id="txt_dni" name="txt_dni" class="caja caja-mediana" value="<?php echo utf8_encode($r['DNIUsu']);?>" readonly></div>
                 </div>
                 <div class="Contenedor6">
-                    <div class="Premisa6">Direccion:</div>
+                    <div class="Premisa6">Dirección:</div>
                     <div class="Campo6"><input type="text" id="txt_direccion" name="txt_direccion" class="caja caja-mediana" value="<?php echo utf8_encode($r['DireccionUsu']);?>" readonly></div>
                 </div>
                 <div class="Contenedor7">
